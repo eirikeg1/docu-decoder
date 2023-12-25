@@ -1,0 +1,77 @@
+{
+    "id": 1,
+    "title": "example",
+    "author": "Bob the builder",
+    "description": "This is an exmaple, which should not be used",
+
+    "keywords": [
+        {
+            "keyword": "lookup",
+            "id": 1
+        },
+        {
+            "keyword": "always use",
+            "id": 2
+        },
+        {
+            "keyword": "avoid",
+            "id": 3
+        }
+    ],
+
+    "topics": [
+        {
+            "keyword": "example",
+            "id": 1
+        },
+        {
+            "keyword": "tutorial",
+            "id": 2
+        },
+        {
+            "keyword": "how to",
+            "id": 3
+        }
+    ],
+
+    "images": [
+        {
+            "id": 1,
+            "description": "Diagram of how to structure the JSON file",
+            "page": 1
+        }
+    ],
+
+    "sources": [
+        {
+            "id": 1,
+            "page": 1,
+            "title": "Example source",
+            "author": "Jack Sparrow",
+            "year": "2018",
+            "short":"(Sparrow, 2018)",
+            "url": "https://www.example.com/pirates/find-treasure"
+        }
+    ],
+
+    "paragraphs": [
+        {   
+            "id": 1,
+            "number": 1,
+            "page": 1,
+            "title": "Title of the paragraph",
+            "summary": "Explains how data is formatted",
+            "content": "This is an example paragraph, which should not be used. This shows how the JSON data is structured. The IDs can be linked to the vector database through payload data."
+        },
+        {
+            "id": 2,
+            "number": 2,
+            "page": 1,
+            "title": "Example paragraph 2",
+            "summary": "Only used for template",
+            "content": "This is an example paragraph, which should not be used"
+        }
+    ],
+
+    "hash": "hHS21ASKdxioa@E"
+}
