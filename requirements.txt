@@ -24,6 +24,9 @@ scikit-learn
 nltk
 sentence-transformers
 
+# OpenAI
+openai
+
 # GOOGLE Gemini API
 google.ai.generativelanguage
 google-auth-oauthlib
