@@ -1,1 +1,4 @@
 .env
+src/__pycache__/__init__.cpython-311.pyc
+src/api_integrations/interfaces/__pycache__/llm_generic_interface.cpython-311.pyc
+src/models/__pycache__/__init__.cpython-311.pyc
