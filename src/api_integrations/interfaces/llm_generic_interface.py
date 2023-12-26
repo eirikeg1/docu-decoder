@@ -17,3 +17,7 @@ class LLMGenericInterface:
         # To add in the future
         raise NotImplementedError("Handle error method not implemented")
     
+    @abstractmethod
+    def summerize_paragraph(self, text: str) -> str:
+        pass
+    

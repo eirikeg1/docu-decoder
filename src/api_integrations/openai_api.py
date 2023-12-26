@@ -27,8 +27,9 @@ class OpenAIInterface(LLMGenericInterface):
         return {"role": "user", "content": message}
     
     prompts = {
-        "expert tutor": "You are an expert tutor. Give an extensive and descriptive answer using relevant technical terms and examples.",
+        "expert_tutor": "You are an expert tutor. Give an extensive and descriptive answer using relevant technical terms and examples.",
         "profile_picture": "Create an avatar of a happy robot tutor in the course {course_name}. Make the robot be the highlight, with a background displaying a simple pattern",
+        "summerize_paragraph": "Summerize the user's paragraph in one descriptive sentence. Focus on using relevant technical terms and keep it short but concise.",
     }
         
       
@@ -42,8 +43,15 @@ class OpenAIInterface(LLMGenericInterface):
         )
         
         return completion.choices[0].text
+    
+    def summerize_paragraph(self, text: str) -> str:
+        completion = self.client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": self.prompts["summerize_paragraph"]},
+                {"role": "user", "content": text}
+            ]
+        )
         
-        
-        
-        
-        
+        return completion.choices[0].text
+    
