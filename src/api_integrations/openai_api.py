@@ -4,6 +4,9 @@ from openai import OpenAI
 from src.api_integrations.interfaces.llm_generic_interface import LLMGenericInterface
 
 
+GPT_4 = "gpt-4-1106-preview"
+GPT_3 = "gpt-3.5-turbo"
+
 class OpenAIInterface(LLMGenericInterface):
     
     client = None
@@ -29,13 +32,13 @@ class OpenAIInterface(LLMGenericInterface):
     prompts = {
         "expert_tutor": "You are an expert tutor. Give an extensive and descriptive answer using relevant technical terms and examples.",
         "profile_picture": "Create an avatar of a happy robot tutor in the course {course_name}. Make the robot be the highlight, with a background displaying a simple pattern",
-        "summerize_paragraph": "Summerize the user's paragraph in one descriptive sentence. Focus on using relevant technical terms and keep it short but concise.",
+        "summerize_paragraph": "Summerize the user's paragraph in one descriptive sentence. Focus on keeping relevant technical terms and keep it short but concise.",
     }
         
       
     def generic_request(self, query: str, params: dict = None, history_key: str = None) -> str | List[str]:
         completion = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=GPT_3,
             messages=[
                 {"role": "system", "content": self.prompts["expert tutor"]},
                 {"role": "user", "content": query}
@@ -46,12 +49,12 @@ class OpenAIInterface(LLMGenericInterface):
     
     def summerize_paragraph(self, text: str) -> str:
         completion = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=GPT_4,
             messages=[
                 {"role": "system", "content": self.prompts["summerize_paragraph"]},
                 {"role": "user", "content": text}
             ]
         )
         
-        return completion.choices[0].text
+        return completion.choices[0].message.content
     
