@@ -50,6 +50,8 @@ class OpenAIInterface(LLMGenericInterface):
     def summerize_paragraph(self, text: str) -> str:
         completion = self.client.chat.completions.create(
             model=GPT_4,
+            temperature=0.3,
+            top_p=0.1,
             messages=[
                 {"role": "system", "content": self.prompts["summerize_paragraph"]},
                 {"role": "user", "content": text}
