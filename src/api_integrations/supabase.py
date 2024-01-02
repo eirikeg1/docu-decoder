@@ -1,5 +1,5 @@
 import os
-from supabase import create_client, Client
+from src.api_integrations.supabase import create_client, Client
 from src.api_integrations.interfaces.database_interface import DataBaseInterface
 
 class SupabaseInterface(DataBaseInterface):
