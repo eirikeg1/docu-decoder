@@ -1,6 +1,8 @@
 # docu-decoder
 _Work in progress_
 
+Uses LLAMA2 and GPT to encode and decode documents. Stores document data in SUPABASE database.
+
 # Installation
 ---
 

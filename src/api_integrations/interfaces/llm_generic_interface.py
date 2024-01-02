@@ -3,7 +3,6 @@ from abc import abstractmethod
 
 class LLMGenericInterface:
     
-    
     @abstractmethod
     def generic_request(self, query: str, params: dict = None, history_key: str = None) -> str:
         pass
