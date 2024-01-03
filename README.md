@@ -13,14 +13,14 @@ Uses LLAMA2 and GPT to encode and decode documents. Stores document data in SUPA
 
 This project can be run using `make`. The following rules are available:
 
-* `clean`:               `Delete all compiled Python files`
-* `create_environment`:  `Set up python interpreter environment` 
-* `data`:                `Make Dataset`
-* `lint`:                `Lint using flake8`
-* `requirements`:        `Install Python Dependencies`
-* `sync_data_from_s3`:   `Download Data from S3`
-* `sync_data_to_s3`:     `Upload Data to S3`
-* `test_environment`:    `Test python environment is setup correctly`
+* `clean`:               Delete all compiled Python files
+* `create_environment`:  Set up python interpreter environment
+* `data`:                Make Dataset
+* `lint`:                Lint using flake8
+* `requirements`:        Install Python Dependencies
+* `sync_data_from_s3`:   Download Data from S3
+* `sync_data_to_s3`:     Upload Data to S3
+* `test_environment`:    Test python environment is setup correctly
 
 ### Encoding the documents
 In order to use the decoder you first need to add the documents to the `documents` folder. Give them descriptive names, if it is an article let this be the title and main author(s) last name. The documents should either be in `.txt`, `.pdf`, `.docx` or `.pptx`. 
