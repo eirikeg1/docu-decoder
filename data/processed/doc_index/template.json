@@ -3,6 +3,9 @@
     "title": "example",
     "author": "Bob the builder",
     "description": "This is an exmaple, which should not be used",
+    "embedding_model": "ADA",
+    "summary_model": "LLAMA2",
+    "hash": "hHS21ASKdxioa@E",
 
     "keywords": [
         {
@@ -71,7 +74,5 @@
             "summary": "Only used for template",
             "content": "This is an example paragraph, which should not be used"
         }
-    ],
-
-    "hash": "hHS21ASKdxioa@E"
+    ]
 }
