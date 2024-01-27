@@ -3,7 +3,7 @@ from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTPage
 from collections import Counter
 
-# Does not ask LLM to summarize short paragraphs to save resources
+# Does not ask LLM to summarize short paragraphs to save resources longer a length of characters
 MIN_PARAGRAPH_LENGTH = 200
 
 def read_file(file_name: str) -> Iterator[LTPage]:
