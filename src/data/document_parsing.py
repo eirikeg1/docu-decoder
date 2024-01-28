@@ -48,3 +48,6 @@ def get_paragraphs(file: Iterator[LTPage]) -> List[dict]:
 
 def get_terms(file: Iterator[LTPage]) -> List[dict]:
     pass
+
+def parse_all_docs():
+    pass
